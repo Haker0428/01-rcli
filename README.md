@@ -1,4 +1,4 @@
-# Geektime Rust 语言训练营
+# RCLI 练习
 
 ## 环境设置
 
