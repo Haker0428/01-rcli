@@ -1,8 +1,8 @@
+use crate::opts::OutputFormat;
 use csv::Reader;
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 use std::fs;
-use crate::opts::OutputFormat;
 
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "PascalCase")]
@@ -33,7 +33,6 @@ pub fn process_csv(input: &str, output: String, format: OutputFormat) -> anyhow:
 
     println!("format: {:?}", format);
     fs::write(output, content)?;
-
 
     Ok(())
 }
